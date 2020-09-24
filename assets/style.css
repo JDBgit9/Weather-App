@@ -1,0 +1,58 @@
+.body {
+   background-color: rgb(55, 183, 226);
+ }
+
+.container {
+   background-color: rgb(247, 242, 242);
+   max-width: max-content;
+   margin-right: 10px;
+   padding-left: 10px;
+   height: 100%;
+}
+
+.h1 {
+  color: darkgrey;
+  align-items: center;
+  text-align: center;
+}
+
+.h4 {
+   align-items: left;
+   margin-right: 10px;
+   font-size: small;
+   color: white;
+}
+/* /* Styles for wrapping the search box */
+
+  .main { 
+      "temp":306.15, //current temperature
+      "pressure":1013,
+      "humidity":44,
+      "temp_min":306, //min current temperature in the city
+      "temp_max":306 //max current temperature in the city
+      },
+             
+   width: 50%;
+   margin: 50px auto;
+} 
+.container {
+   max-width: 80%;
+   margin-right: auto;
+}
+/* Bootstrap 4 text input with search icon */
+
+ .has-search .form-control {
+   padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+   position: absolute;
+   z-index: 2;
+   display: block;
+   width: 2.375rem;
+   height: 2.375rem;
+   line-height: 2.375rem;
+   text-align: center;
+   pointer-events: none;
+   color: #aaa;
+} 

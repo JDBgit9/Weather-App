@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <!-- my kit code goes here -->
+  <script src="https://kit.fontawesome.com/df5b3591a7.js" crossorigin="anonymous"></script>
+  <!-- bootstrap link goes here -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <h1 style="color:rgb(229, 229, 240);text-align:center;background-color:grey;">Weather Dashboard</h1>
+  <div class="container-fluid" style="position: justify-content">
+    <div class="row">
+      <div class="col-lg-4" class="formInline">
+        <p>Search For a City</p>
+        <form id="weather-form" class="form-inline" role="form">
+          <div class="form-group">
+            <label class="sr-only" for="name">City</label>
+            <input type="text" class="form-control weather-input" id="weather-input" placeholder="Enter City Name">
+          </div>
+          <div class="form-group">
+            <label class="sr-only" for="inputfile">File input</label>
+          </div>
+          <button class="btn btn-secondary" type="button"><i class="fa fa-search"></i>
+          </button>
+        </form>
+      </div>
+      <div class="col-md-8">
+        <div class="card" style="width: 100%;height: 80%; align-content: right;">
+          <div class="group-list -group-list-flash">
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div id="currentWeather" class="card-mt-4">
+                <h2 <h1>Current Weather</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="width: 100%;height: 90%;">
+          <div class="group-list -group-list-flash">
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <h1>Forecast</h1>
+              <div id="forecastDay1" class="card-group">
+                <div class="card" text-white bg-primary mb-3 mr-4" style="max-width: 10rem;">
+                  <h5 class="card-title">8/16/2019</h5>
+                  <p class="card-text"><i class="fa fa-search aria-hidden=" true"></i></p>
+                  <p class="card-text">Temp: 86.84 F</p>
+                  <p class="card-text">Humidity: 43%</p>
+                </div>
+                <div id="forecastDay2" class="card-group">
+                  <div class="card" text-white bg-primary mb-3 mr-4" style="max-width: 10rem;" <h5 class="card-title">
+                    8/16/2020</h5>
+                    <p class="card-text"><i class="fa fa-search aria-hidden=" true"></i></p>
+                    <p class="card-text">Temp: 86.84 F</p>
+                    <p class="card-text">Humidity: 43%</p>
+                  </div>
+                  <div id="forecastDay3" class="card-group">
+                    <div class="card" text-white bg-primary mb-3 mr-4" style="max-width: 10rem;" <h5 class="card-title">
+                      8/16/2019</h5>
+                      <p class="card-text"><i class="fa fa-search aria-hidden=" true"></i></p>
+                      <p class="card-text">Temp: 86.84 F</p>
+                      <p class="card-text">Humidity: 43%</p>
+                    </div>
+                    <div id="forecastDay4" class="card-group">
+                      <div class="card" text-white bg-primary mb-3 mr-4" style="max-width: 10rem;" <h5
+                        class="card-title">8/16/2019</h5>
+                        <p class="card-text"><i class="fa fa-search aria-hidden=" true"></i></p>
+                        <p class="card-text">Temp: 86.84 F</p>
+                        <p class="card-text">Humidity: 43%</p>
+                      </div>
+                      <div id="forecastDay5" class="card-group">
+                        <div class="card" text-white bg-primary mb-3 mr-4" style="max-width: 10rem;" <h5
+                          class="card-title">8/16/2019</h5>
+                          <p class="card-text"><i class="fa fa-search aria-hidden=" true"></i></p>
+                          <p class="card-text">Temp: 86.84 F</p>
+                          <p class="card-text">Humidity: 43%</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+
+
+
+
+
+
+
+
+
+
+          <!-- <div class="col-md-4">
+      <div class="col-lg-8">
+
+        <div class="col-md-4">
+          <div class="col-lg-8">
+
+          </div>
+          <!-- Retrieved data will be dumped here -->
+          <!-- search paremeters -->
+          <!-- 
+    <!-- float -->
+          <!-- put in div input -group -->
+
+          <!-- Actual search box -->
+          <!-- Another variation with a button -->
+          <!-- <!-- <div class="input-group"> -->
+
+
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script src="assets/weather.js"></script>
+          <!-- // Things to accomplish:
+    // Get an API Key from OpenWeatherMap API
+    // Create an AJAX call to retrieve data Log the data in console
+    // Log the data in HTML
+    // Scream Ushindi (victory in Swahili)! at the top of your lungs
+    // col 3 button -->
+
+
+</body>
+
+</html>
