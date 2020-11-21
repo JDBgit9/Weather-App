@@ -2,135 +2,168 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather Dashboard</title>
-  <!-- my kit code goes here -->
-  <script src="https://kit.fontawesome.com/df5b3591a7.js" crossorigin="anonymous"></script>
-  <!-- bootstrap link goes here -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <!-- stylesheet -->
-  <link rel="stylesheet" href="assets/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="assets\images\weather-icons-master\css\weather-icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+
 </head>
+
 <body>
-  <h1 style="color:rgb(229, 229, 240);text-align:center;background-color:grey;">Weather Dashboard</h1>
-  <div class="container-fluid" style="position: justify-content">
-    <div class="row">
-      <div class="col-lg-4" class="formInline">
-        <p>Search For a City</p>
-        <form id="weather-form" class="form-inline" role="form">
-          <div class="form-group">
-            <label class="sr-only" for="name">City</label>
-            <input type="text" class="form-control weather-input" id="weather-input" placeholder="Enter City Name">
-          </div>
-          <div class="form-group">
-            <label class="sr-only" for="inputfile">File input</label>
-          </div>
-          <button class="btn btn-secondary" type="button"><i class="fa fa-search"></i>
-          </button>
-        </form>
-      </div>
-      <div class="col-md-8">
-        <div class="card" style="width: 100%;height: 80%; align-content: right;">
-          <div class="group-list -group-list-flash">
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <div id="currentWeather" class="card-mt-4">
-                <h2 <h1>Current Weather</h1>
-              </div>
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title" id="weatherDashboardTitle">
+                    Weather Dashboard
+                </h1>
             </div>
-          </div>
         </div>
-        <div class="card" style="width: 100%;height: 90%;">
-          <div class="group-list -group-list-flash">
-          </div>
-          <div class="row">
-            <div class="col-md-8">
-              <h1>Forecast</h1>
-              <div id="forecastDay1" class="card-group">
-                <div class="card" text-white bg-primary mb-3 mr-4" style="max-width: 10rem;">
-                  <h5 class="card-title">8/16/2019</h5>
-                  <p class="card-text"><i class="fa fa-search aria-hidden=" true"></i></p>
-                  <p class="card-text">Temp: 86.84 F</p>
-                  <p class="card-text">Humidity: 43%</p>
-                </div>
-                <div id="forecastDay2" class="card-group">
-                  <div class="card" text-white bg-primary mb-3 mr-4" style="max-width: 10rem;" <h5 class="card-title">
-                    8/16/2020</h5>
-                    <p class="card-text"><i class="fa fa-search aria-hidden=" true"></i></p>
-                    <p class="card-text">Temp: 86.84 F</p>
-                    <p class="card-text">Humidity: 43%</p>
-                  </div>
-                  <div id="forecastDay3" class="card-group">
-                    <div class="card" text-white bg-primary mb-3 mr-4" style="max-width: 10rem;" <h5 class="card-title">
-                      8/16/2019</h5>
-                      <p class="card-text"><i class="fa fa-search aria-hidden=" true"></i></p>
-                      <p class="card-text">Temp: 86.84 F</p>
-                      <p class="card-text">Humidity: 43%</p>
-                    </div>
-                    <div id="forecastDay4" class="card-group">
-                      <div class="card" text-white bg-primary mb-3 mr-4" style="max-width: 10rem;" <h5
-                        class="card-title">8/16/2019</h5>
-                        <p class="card-text"><i class="fa fa-search aria-hidden=" true"></i></p>
-                        <p class="card-text">Temp: 86.84 F</p>
-                        <p class="card-text">Humidity: 43%</p>
-                      </div>
-                      <div id="forecastDay5" class="card-group">
-                        <div class="card" text-white bg-primary mb-3 mr-4" style="max-width: 10rem;" <h5
-                          class="card-title">8/16/2019</h5>
-                          <p class="card-text"><i class="fa fa-search aria-hidden=" true"></i></p>
-                          <p class="card-text">Temp: 86.84 F</p>
-                          <p class="card-text">Humidity: 43%</p>
+    </section>
+
+    <div class="container">
+        <div class="columns is-ancestor">
+            <div class="column is-one-third">
+                <article class="tile is-child notification" id="searchBoxBg">
+                    <!--Search bar and frequently searched cities-->
+                    <p class="title" id="searchTitle">Search</p>
+                    <div id="searchBox">
+                        <!--Input field for City-->
+                        <div class="field is-grouped">
+                            <input class="input" type="text" placeholder="City" id="cityInput">
+                            <button class="button" id="searchBtn">
+                                <span class="icon">
+                                    <i class="fas fa-search-location"></i>
+                                </span>
+                            </button>
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                        <br>
+                        <div id="frequentlySearched">
+                            <button class="button is-info" id="austin">Austin</button>
+                            <button class="button is-info" id="chicago">Chicago</button>
+                            <button class="button is-info" id="newYork">New York</button>
+                            <button class="button is-info" id="orlando">Orlando</button>
+                            <button class="button is-info" id="sanFrancisco">San Francisco</button>
+                            <button class="button is-info" id="seattle">Seattle</button>
+                            <button class="button is-info" id="denver">Denver</button>
+                            <button class="button is-info" id="atlanta">Atlanta</button>
+                        </div>
+                </article>
             </div>
-          </div>
-          <br>
+            <div class="column is-two-thirds">
+                <div class="tile is-parent is-vertical">
+                    <article class="tile is-child notification" id="statBox">
+                        <h4 id="cityStats"></h4>
+                        <p id="dateBox"></p>
+                        <p id="temperatureResponse"></p>
+                        <p id="humidityResponse"></p>
+                        <p id="windSpeedResponse"></p>
+                        <p id="uvIndexResponse">UV Index: <a id="wikiUVLink"></a></p>
+                        <img src="https://source.unsplash.com/featured/?Austin,city/" alt="random image" id="randoImg">
+                    </article>
 
+                    <article class="tile is-child notification" id="weatherBox">
+                        <!--Dynamically append the city name here.-->
+                        <p class="title" id="cityForecast"></p>
+                        <div class="columns is-multiline">
+                            <!-- Content -->
+                            <div class="column" id="currentCityWeather">
+                                <figure class="image">
+                                    <i id="currentIcon"></i></figure>
+                                <h6 id="currentDate"></h6>
+                                <h1 class="weatherTemp has-text-centered is-size-2" id="currentTemp">
+                                    <!--Add temperature here!-->
+                                </h1>
+                                <h3 class="weatherCondition has-text-centered is-size-5" id="currentCondition">
+                                    <!--Replace text with string that tells you conditions, like, windy, clear, sunny, stormy-->
+                                    Current weather
+                                </h3>
+                            </div>
+                            <div class="column" id="day1Forecast">
+                                <figure class="image">
+                                    <i id="day1Icon"></i></figure>
+                                <h6 id="day1Date"></h6>
+                                <h1 class="weatherTemp has-text-centered is-size-2" id="day1Temp">
+                                </h1>
+                                <h3 class="weatherCondition has-text-centered is-size-5" id="day1Condition">
+                                    Day 1 weather
+                                </h3>
+                            </div>
+                            <div class="column" id="day2Forecast">
+                                <figure class="image">
+                                    <i id="day2Icon"></i></figure>
+                                <h6 id="day2Date"></h6>
+                                <h1 class="weatherTemp has-text-centered is-size-2" id="day2Temp">
+                                </h1>
+                                <h3 class="weatherCondition has-text-centered is-size-5" id="day2Condition">
+                                    Day 2 weather
+                                </h3>
+                            </div>
+                            <div class="column" id="day3Forecast">
+                                <figure class="image">
+                                    <i id="day3Icon"></i></figure>
+                                <h6 id="day3Date"></h6>
+                                <h1 class="weatherTemp has-text-centered is-size-2" id="day3Temp">
+                                </h1>
+                                <h3 class="weatherCondition has-text-centered is-size-5" id="day3Condition">
+                                    Day 3 weather
+                                </h3>
+                            </div>
+                            <div class="column" id="day4Forecast">
+                                <figure class="image">
+                                    <i id="day4Icon"></i></figure>
+                                <h6 id="day4Date"></h6>
+                                <h1 class="weatherTemp has-text-centered is-size-2" id="day4Temp">
+                                </h1>
+                                <h3 class="weatherCondition has-text-centered is-size-5" id="day4Condition">
+                                    Day 4 weather
+                                </h3>
+                            </div>
+                            <div class="column" id="day5Forecast">
+                                <figure class="image">
+                                    <i id="day5Icon"></i></figure>
+                                <h6 id="day5Date"></h6>
+                                <h1 class="weatherTemp has-text-centered is-size-2" id="day5Temp">
+                                </h1>
+                                <h3 class="weatherCondition has-text-centered is-size-5" id="day5Condition">
+                                    Day 5 weather
+                                </h3>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-
-
-
-
-
-
-
-          <!-- <div class="col-md-4">
-      <div class="col-lg-8">
-
-        <div class="col-md-4">
-          <div class="col-lg-8">
-
-          </div>
-          <!-- Retrieved data will be dumped here -->
-          <!-- search paremeters -->
-          <!-- 
-    <!-- float -->
-          <!-- put in div input -group -->
-
-          <!-- Actual search box -->
-          <!-- Another variation with a button -->
-          <!-- <!-- <div class="input-group"> -->
-
-
-
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-          <script src="assets/weather.js"></script>
-          <!-- // Things to accomplish:
-    // Get an API Key from OpenWeatherMap API
-    // Create an AJAX call to retrieve data Log the data in console
-    // Log the data in HTML
-    // Scream Ushindi (victory in Swahili)! at the top of your lungs
-    // col 3 button -->
-
-
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p id="footerTxt">
+                Weather Dashboard by <a href="https://github.com/JDBgit9">James Beeks</a>. Copyright &copy; 2020
+            </p>
+        </div>
+        <a id="bgCredit"
+            style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, 
+            BlinkMacSystemFont, &quot;San Francisco&quot;, 
+            &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, 
+            sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
+            href="https://unsplash.com/@valentinmuellerandalanmueller?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+            target="_blank" rel="noopener noreferrer"
+            title="Download free do whatever you want high-resolution photos from Valentin Müller"><span
+                style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg"
+                    style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white"
+                    viewBox="0 0 32 32">
+                    <title>unsplash-logo</title>
+                    <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
+                </svg></span><span style="display:inline-block;padding:2px 3px">Valentin Müller</span></a>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/moment.js"></script>
+    <script type="text/javascript" src="assets/scripts/script.js" defer></script>
 </body>
 
 </html>
