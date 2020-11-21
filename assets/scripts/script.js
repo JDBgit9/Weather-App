@@ -39,17 +39,13 @@ $(document).ready(function () {
             $("#cityStats").html(cityEl);
             $("#cityForecast").html("Weather Forecast: " + cityEl);
 
-            //This is for current weather!
+         
             var currentTempEl = response.main.temp;
             $("#temperatureResponse").html("Current Temperature: " + currentTempEl + "&deg;F");
             $("#currentTemp").html(currentTempEl + "&deg;F");
-
-            //stats for box above weather icons
-            $("#humidityResponse").html("Humidity: " + response.main.humidity + "&#37;"); //humidity
-            $("#windSpeedResponse").html("Wind Speed: " + response.wind.speed + " mph"); //wind speed
-
-            //current weather conditions
-            var currentConditionEl = response.weather[0].description; //this is in the icon box
+            $("#humidityResponse").html("Humidity: " + response.main.humidity + "&#37;"); 
+            $("#windSpeedResponse").html("Wind Speed: " + response.wind.speed + " mph"); 
+            var currentConditionEl = response.weather[0].description; 
             $("#currentCondition").text(currentConditionEl);
             //current weather icon
             var iconCode = response.weather[0].id;
