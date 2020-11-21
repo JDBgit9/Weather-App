@@ -1,10 +1,11 @@
 
 html{
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(10, 10, 10, 0);
 }
 
 body {
-    background: url("") no-repeat fixed;
+    background: url("./waterbeads.jpeg") no-repeat fixed;
+    background-size: cover;
 }
 
 h1 {
@@ -152,9 +153,7 @@ a {
     font-size: 1.8rem;
 }
 
-#bgCredit {
-    float: right;
-}
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {

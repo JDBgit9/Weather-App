@@ -42,15 +42,12 @@
     function isUndefined(input) {
         return input === void 0;
     }
-
     function isNumber(input) {
         return typeof input === 'number' || Object.prototype.toString.call(input) === '[object Number]';
     }
-
     function isDate(input) {
         return input instanceof Date || Object.prototype.toString.call(input) === '[object Date]';
     }
-
     function map(arr, fn) {
         var res = [], i;
         for (i = 0; i < arr.length; ++i) {
