@@ -4,7 +4,7 @@ html{
 }
 
 body {
-    background: url("./waterbeads.jpeg") no-repeat fixed;
+    background: url("./scripts/img/waterbeads.jpeg") no-repeat fixed;
     background-size: cover;
 }
 
