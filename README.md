@@ -10,7 +10,7 @@ JDBgit9
 2020
 
 # Full Name
-James D Beeks
+James Justis
 
 ## Installation
 npm 
@@ -34,11 +34,11 @@ undefined
 MIT 
 
 ## Email
-info@jamesdbeeks.com
+jamesthejust99@outlook.com
 
 
 ---
-© 2020 James D Beeks developer readme, a Delisco, Inc. brand. All Rights Reserved.
+© 2022 James Justis developer readme, a Justis, Inc. brand. All Rights Reserved.
 
 
 
